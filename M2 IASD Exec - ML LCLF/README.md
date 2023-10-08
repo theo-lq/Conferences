@@ -1,6 +1,6 @@
 # Machine Learning pour la lutte contre la fraude : voir grand et tout petit
 
-Conférence donné le 9 octobre 2023 dans le cadre du [master IASD Executive](https://executive-education.dauphine.psl.eu/formations/executive-master-diplome-universite/ia-science-donnees)
+Conférence donnée le 9 octobre 2023 dans le cadre du [master IASD Executive](https://executive-education.dauphine.psl.eu/formations/executive-master-diplome-universite/ia-science-donnees)
 
 L'objectif est de présenter les challenges du domaine de la lutte contre la fraude rencontrés en entreprise, par le prisme de l'apprentissage automatique.
 
