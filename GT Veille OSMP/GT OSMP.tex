@@ -518,126 +518,6 @@ beaucoup à faire.
 \end{frame}
 
 
-\subsection{Fléau de la dimension}
-
-\begin{frame}{}{Motivation}
-	\begin{columns}
-		\begin{column}{0.6\textwidth}
-			\begin{customquote}{Georg Cantor}{1877}
-				Tant que vous ne m'aurez pas approuvé, je ne puis que dire : je le vois mais je ne le crois pas.
-			\end{customquote}
-		\end{column}
-		\begin{column}{0.5\textwidth}
-			\centering
-			\begin{tikzpicture}
-				\clip (0,0) circle (1.75cm) node {\includegraphics[width=8cm]{Photos/Cantor}};
-			\end{tikzpicture}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}{}{Volume d'une hypersphère}
-	\begin{figure}[h!]
-		\centering
-		\visible<1->{
-		\begin{subfigure}[t]{.31\linewidth}
-			\centering
-			\begin{tikzpicture}[scale=0.5]
-				\draw[primary, very thick] (-2, 0) node[primary, very thick]{$\bullet$} -- (2, 0) node[primary, very thick]{$\bullet$};
-			\end{tikzpicture}
-			\caption{En dimension 1, volume = 2}
-		\end{subfigure}}
-		\visible<2->{
-		\begin{subfigure}[t]{.31\linewidth}
-			\centering
-			\begin{tikzpicture}[scale=0.5]
-				\draw[primary, very thick] (0, 0) circle(2);
-			\end{tikzpicture}
-			\caption{En dimension 2, volume = $\pi$}
-		\end{subfigure}}
-		\visible<4->{
-		\begin{subfigure}[t]{.31\linewidth}
-			\centering
-			\begin{tikzpicture}[scale=0.5]
-  				\draw[primary, very thick] (0,0) circle (2);
-  				\draw[primary, thick] (-2, 0) arc (180:360:2 and 0.6);
-  				\draw[dashed, primary, thick] (2, 0) arc (0:180:2 and 0.6);
-			\end{tikzpicture}
-			\caption{En dimension 3, volume = $\frac{4}{3}\pi$}
-		\end{subfigure}}
-		\visible<1->{
-		\caption{Représentation et volume d'une hypersphère de rayon 1 dans 3 espaces de dimensions différentes}}
-	\end{figure}
-	
-	\begin{figure}[h!]
-		\centering
-		\visible<3->{
-		\begin{subfigure}[t]{.31\linewidth}
-			\centering
-			\begin{tikzpicture}[scale=0.5]
-				\draw[primary, very thick] (-2, 0) -- (0, -2) -- (2, 0) -- (0, 2) -- cycle;
-			\end{tikzpicture}
-			\caption{Avec la norme 1}
-		\end{subfigure}}
-		\visible<2->{
-		\begin{subfigure}[t]{.31\linewidth}
-			\centering
-			\begin{tikzpicture}[scale=0.5]
-				\draw[primary, very thick] (0, 0) circle(2);
-			\end{tikzpicture}
-			\caption{Avec la norme 2}
-		\end{subfigure}}
-		\visible<3->{
-		\begin{subfigure}[t]{.31\linewidth}
-			\centering
-			\begin{tikzpicture}[scale=0.5]
-  				\draw[primary, very thick] (-2, 2) -- (-2, -2) -- (2, -2) -- (2, 2) -- cycle;
-			\end{tikzpicture}
-			\caption{Avec la norme infinie}
-		\end{subfigure}}
-		\visible<2->{
-		\caption{Représentation d'une hypersphère de rayon 1 en dimension 2 pour 3 normes différentes}}
-	\end{figure}
-\end{frame}
-
-\begin{frame}{}{Volume d'une hypersphère}
-	On appelle \textit{boule} ou hypersphère l'objet défini par :
-	\begin{equation*} 
-		B_n^p(R) = \{ u \in \mathbb{R}^n, \|u\|_p^p \leqslant R^p\}
-	\end{equation*}
-	
-	Et son volume par :
-	\begin{equation*} V_n^p(R) = \int_{B_n^p(R)} \bigotimes_{i=1}^n\mathrm{d}x_i \end{equation*}
-	
-	\begin{proposition}[Volume d'une hypersphere] Avec les notations précédentes, on a:
-		\begin{eqnarray*} 
-			\forall R>0, \forall n\geqslant 2, \forall p\geqslant 1, \; \; \; V_n^p(R) &=& \frac{\left(2R\Gamma\left(\frac{1}{p}+1\right)\right)^n}{\Gamma\left(\frac{n}{p}+1\right)} \\
-			&\sim& \sqrt{\frac{p}{2\pi n}} \left[2R\Gamma\left(\frac{1}{p}+1\right) \left(\frac{pe}{n}\right)^{\frac{1}{p}}\right]^n 
-		\end{eqnarray*}
-	
-		Avec la fonction $\Gamma$ définie comme :
-		\begin{equation*} \Gamma(x) = \int_0^{+\infty} e^{-t}t^{x-1}\mathrm{d}t \end{equation*}
-	\end{proposition}
-\end{frame}
-
-
-
-\begin{frame}{}{Concentration dans une hypersphère}
-	On rappelle que :
-	
-	\begin{equation*}
-		\forall R>0, \forall n\geqslant 2, \forall p\geqslant 1, \; \; \; V_n^p(R) = \frac{\left(2R\Gamma\left(\frac{1}{p}+1\right)\right)^n}{\Gamma\left(\frac{n}{p}+1\right)} 
-	\end{equation*}
-	
-	\begin{exercice}[Concentration dans l'hypersphère]
-		Soit $\varepsilon > 0$. On considère une hypersphère de rayon $R$. Montrer que :
-			\begin{equation*} 
-				\frac{V_n^p(R - \varepsilon)}{V_n^p(R)} = \left(1- \frac{\varepsilon}{R}\right)^n 
-			\end{equation*}
-	\end{exercice}
-\end{frame}
-
-
 \begin{frame}{}{En résumé}
 	\begin{itemize}
 		\item \texthighlight{L'hyper déséquilibre} de classe induit des difficultés d'entraînement et nécessite des réponses mesurées
@@ -732,6 +612,103 @@ beaucoup à faire.
 	
 	Nous avons fixé la valeur de $\delta$ comme le quantile à 0.5\% de la loi du $\chi^2$ induite par le dataset.
 \end{frame}
+
+
+\section{Annexe : Fléau de la dimension}
+
+\begin{frame}{}{Volume d'une hypersphère}
+	\begin{figure}[h!]
+		\centering
+		\begin{subfigure}[t]{.31\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.5]
+				\draw[primary, very thick] (-2, 0) node[primary, very thick]{$\bullet$} -- (2, 0) node[primary, very thick]{$\bullet$};
+			\end{tikzpicture}
+			\caption{En dimension 1, volume = 2}
+		\end{subfigure}
+		\begin{subfigure}[t]{.31\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.5]
+				\draw[primary, very thick] (0, 0) circle(2);
+			\end{tikzpicture}
+			\caption{En dimension 2, volume = $\pi$}
+		\end{subfigure}
+		\begin{subfigure}[t]{.31\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.5]
+  				\draw[primary, very thick] (0,0) circle (2);
+  				\draw[primary, thick] (-2, 0) arc (180:360:2 and 0.6);
+  				\draw[dashed, primary, thick] (2, 0) arc (0:180:2 and 0.6);
+			\end{tikzpicture}
+			\caption{En dimension 3, volume = $\frac{4}{3}\pi$}
+		\end{subfigure}
+		\caption{Représentation et volume d'une hypersphère de rayon 1 dans 3 espaces de dimensions différentes}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\begin{subfigure}[t]{.31\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.5]
+				\draw[primary, very thick] (-2, 0) -- (0, -2) -- (2, 0) -- (0, 2) -- cycle;
+			\end{tikzpicture}
+			\caption{Avec la norme 1}
+		\end{subfigure}
+		\begin{subfigure}[t]{.31\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.5]
+				\draw[primary, very thick] (0, 0) circle(2);
+			\end{tikzpicture}
+			\caption{Avec la norme 2}
+		\end{subfigure}
+		\begin{subfigure}[t]{.31\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.5]
+  				\draw[primary, very thick] (-2, 2) -- (-2, -2) -- (2, -2) -- (2, 2) -- cycle;
+			\end{tikzpicture}
+			\caption{Avec la norme infinie}
+		\end{subfigure}
+		\caption{Représentation d'une hypersphère de rayon 1 en dimension 2 pour 3 normes différentes}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{}{Volume d'une hypersphère}
+	On appelle \textit{boule} ou hypersphère l'objet défini par :
+	\begin{equation*} 
+		B_n^p(R) = \{ u \in \mathbb{R}^n, \|u\|_p^p \leqslant R^p\}
+	\end{equation*}
+	
+	Et son volume par :
+	\begin{equation*} V_n^p(R) = \int_{B_n^p(R)} \bigotimes_{i=1}^n\mathrm{d}x_i \end{equation*}
+	
+	\begin{proposition}[Volume d'une hypersphere] Avec les notations précédentes, on a:
+		\begin{eqnarray*} 
+			\forall R>0, \forall n\geqslant 2, \forall p\geqslant 1, \; \; \; V_n^p(R) &=& \frac{\left(2R\Gamma\left(\frac{1}{p}+1\right)\right)^n}{\Gamma\left(\frac{n}{p}+1\right)} \\
+			&\sim& \sqrt{\frac{p}{2\pi n}} \left[2R\Gamma\left(\frac{1}{p}+1\right) \left(\frac{pe}{n}\right)^{\frac{1}{p}}\right]^n 
+		\end{eqnarray*}
+	
+		Avec la fonction $\Gamma$ définie comme :
+		\begin{equation*} \Gamma(x) = \int_0^{+\infty} e^{-t}t^{x-1}\mathrm{d}t \end{equation*}
+	\end{proposition}
+\end{frame}
+
+
+
+\begin{frame}{}{Concentration dans une hypersphère}
+	On rappelle que :
+	
+	\begin{equation*}
+		\forall R>0, \forall n\geqslant 2, \forall p\geqslant 1, \; \; \; V_n^p(R) = \frac{\left(2R\Gamma\left(\frac{1}{p}+1\right)\right)^n}{\Gamma\left(\frac{n}{p}+1\right)} 
+	\end{equation*}
+	
+	\begin{exercice}[Concentration dans l'hypersphère]
+		Soit $\varepsilon > 0$. On considère une hypersphère de rayon $R$. Montrer que :
+			\begin{equation*} 
+				\frac{V_n^p(R - \varepsilon)}{V_n^p(R)} = \left(1- \frac{\varepsilon}{R}\right)^n 
+			\end{equation*}
+	\end{exercice}
+\end{frame}
+
 
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.14)  23 APR 2024 22:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.14)  24 APR 2024 00:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1763,7 +1763,7 @@ al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 ] (./GT OSMP.toc) [3
 
 ]
-<Photos/AlanTuring.jpg, id=81, 473.77pt x 391.4625pt>
+<Photos/AlanTuring.jpg, id=85, 473.77pt x 391.4625pt>
 File: Photos/AlanTuring.jpg Graphic file (type jpg)
 <use Photos/AlanTuring.jpg>
 Package pdftex.def Info: Photos/AlanTuring.jpg  used on input line 67.
@@ -1879,42 +1879,31 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/5'
 (microtype)             (new value: 5.0pt) on input line 518.
  [23
 
+] [24
+
+] (./GT OSMP.toc) [25
+
 ]
-<Photos/Cantor.jpg, id=277, 632.3625pt x 291.0875pt>
-File: Photos/Cantor.jpg Graphic file (type jpg)
-<use Photos/Cantor.jpg>
-Package pdftex.def Info: Photos/Cantor.jpg  used on input line 537.
-(pdftex.def)             Requested size: 227.62204pt x 104.77809pt.
- [24
-
- <./Photos/Cantor.jpg>]
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/dsrom/m/n/9'
-(microtype)             (new value: 9.0pt) on input line 601.
- [25
-
-] [26
+(microtype)             (new value: 9.0pt) on input line 574.
+ [26
 
 ] [27
 
 ] [28
 
+] (./GT OSMP.toc) [29
+
 ]
-Overfull \vbox (14.59949pt too high) detected at line 621
+[30
+
+]
+Overfull \vbox (14.59949pt too high) detected at line 693
  []
 
-[29
+[31
 
-] [30
-
-] [31
-
-] (./GT OSMP.toc) [32
-
-] [33
-
-] [34
-
-] [35
+] [32
 
 ]
 \tf@nav=\write8
@@ -1932,14 +1921,14 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `"GT OSMP".out' has not changed.
-(rerunfilecheck)             Checksum: 7441EE3739371071222D270C42564828;690.
+(rerunfilecheck)             Checksum: E5B6077044C22E258F40E901F7AADD74;901.
  ) 
 Here is how much of TeX's memory you used:
- 57224 strings out of 474116
- 1277970 string characters out of 5743682
- 1980187 words of memory out of 5000000
- 78249 multiletter control sequences out of 15000+600000
- 617756 words of font info for 258 fonts, out of 8000000 for 9000
+ 57208 strings out of 474116
+ 1277645 string characters out of 5743682
+ 1981187 words of memory out of 5000000
+ 78238 multiletter control sequences out of 15000+600000
+ 617680 words of font info for 257 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,12n,126p,3269b,1269s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1959,10 +1948,10 @@ exlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
 al/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/202
 4/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "GT OSMP.pdf" (35 pages, 441620 bytes).
+Output written on "GT OSMP.pdf" (32 pages, 367589 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
- 82 named destinations out of 1000 (max. 500000)
- 95829 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 467 PDF objects out of 1000 (max. 8388607)
+ 363 compressed objects within 4 object streams
+ 76 named destinations out of 1000 (max. 500000)
+ 95832 words of extra memory for PDF output out of 106986 (max. 10000000)
 
