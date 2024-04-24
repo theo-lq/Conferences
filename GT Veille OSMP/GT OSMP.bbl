@@ -1,0 +1,18 @@
+\begin{thebibliography}{}
+
+\bibitem[Balestriero et~al., 2021]{balestriero_highdimension}
+Balestriero, R., Pesenti, J., and LeCun, Y. (2021).
+\newblock Learning in high dimension always amounts to extrapolation.
+\newblock {\em arXiv preprint arXiv:2110.09485}.
+
+\bibitem[Jean, 2019]{jean2019autre}
+Jean, A. (2019).
+\newblock {\em De l'autre c{\^o}t{\'e} de la machine}.
+\newblock {\'e}ditions de l'Observatoire/Humensis, Paris.
+
+\bibitem[Nakkiran, 2019]{nakkiran2019more}
+Nakkiran, P. (2019).
+\newblock More data can hurt for linear regression: Sample-wise double descent.
+\newblock {\em arXiv preprint arXiv:1912.07242}.
+
+\end{thebibliography}

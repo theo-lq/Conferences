@@ -62,7 +62,7 @@ beaucoup à faire.
 	\begin{itemize}
 		\item \texthighlight{Conférence de Dartmouth - 1956} : Début des travaux dans l'objectif de créer des machines intelligentes
 		\item \texthighlight{Scikit-Learn - 2007} : Création d'une librairie open-source pour faciliter la modélisation en Machine Learning
-		\item \texthighlight{AlexNet - 2012} : avènement du Deep Learning avec un modèle de classification d'image révolutionnaire dans la compétition ImageNet
+		\item \texthighlight{AlexNet - 2012} : Avènement du Deep Learning avec un modèle de classification d'image révolutionnaire dans la compétition ImageNet
 	\end{itemize}
 \end{frame}
 
@@ -71,8 +71,8 @@ beaucoup à faire.
 	\begin{columns}
 		\begin{column}{0.6\textwidth}
 			\begin{itemize}
-				\item \texthighlight{Algorithme} : Ensemble hiérarchisé d'opérations logiques à exécuter dans le but de résoudre un problème\footnote{Aurélie Jean, De l'autre côté de la Machine}
-				\item \texthighlight{Intelligence artificielle} : Ensemble d'algorithme résolvant des problèmes sans être explicitement programmé pour le faire
+				\item \texthighlight{Algorithme} : Ensemble hiérarchisé d'opérations logiques à exécuter dans le but de résoudre un problème \cite{jean2019autre}
+				\item \texthighlight{Intelligence artificielle} : Ensemble d'algorithmes résolvant des problèmes sans être explicitement programmé pour le faire
 				\item \texthighlight{Machine Learning} : Sous-ensemble de l'IA où les algorithmes apprennent à partir d'une base de données
 				\item \texthighlight{Deep Learning} : Sous-ensemble du ML où les algorithmes sont des variantes d'un algorithme de ML nommé \textit{réseau de neurones}
 			\end{itemize}
@@ -218,14 +218,14 @@ beaucoup à faire.
 \begin{frame}{}{Régression logistique : descente de gradient}
 	La méthode la plus utilisée pour résoudre ce genre de problème est la descente de gradient :
 
-			\begin{equation*}
-				w_{t+1} = w_t - \tikzmarknode{learning_rate}{\highlight{primary}{\eta_t}} \nabla\mathcal{L}\left(w_t\right)
-			\end{equation*}
+	\begin{equation*}
+		w_{t+1} = w_t - \tikzmarknode{learning_rate}{\highlight{primary}{\eta_t}} \nabla\mathcal{L}\left(w_t\right)
+	\end{equation*}
 
-			\begin{tikzpicture}[overlay, remember picture, >=stealth, nodes={align=left, inner ysep=1pt}, <-]
-				\path (learning_rate.south) ++ (0, -1em) node[anchor=north west, color=primary!60] (learning_rate_point){\textbf{Learning rate}};
-				 \draw [color=primary!80](learning_rate.south) |- ([xshift=-0.3ex, color=primary] learning_rate_point.north east);
-			\end{tikzpicture}
+	\begin{tikzpicture}[overlay, remember picture, >=stealth, nodes={align=left, inner ysep=1pt}, <-]
+		\path (learning_rate.south) ++ (0, -1em) node[anchor=north west, color=primary!60] (learning_rate_point){\textbf{Learning rate}};
+		\draw [color=primary!80](learning_rate.south) |- ([xshift=-0.3ex, color=primary] learning_rate_point.north east);
+	\end{tikzpicture}
 	
 	\begin{columns}
 		\begin{column}{0.6\textwidth}
@@ -482,7 +482,7 @@ beaucoup à faire.
 \subsection{Drifts : changements de distributions}
 
 \begin{frame}{}{}
-	Le monde des paiements change, et les fraudeurs aussi. On peut noter deux manière principales dont les mouvements se font :
+	Le monde des paiements change, et les fraudeurs aussi. On peut noter deux manières principales dont les mouvements se font :
 	\begin{itemize}
 		\item \texthighlight{Covariate shift} : La distribution des features change
 		\item \texthighlight{Concept drift} : La relation entre la cible et les features change
@@ -518,21 +518,36 @@ beaucoup à faire.
 \end{frame}
 
 
+\subsection{Fléau de la dimension}
+
+\begin{frame}{}{}
+	Le fléau de la dimension correspond aux problèmes qui surviennent quand on travaille en grande dimension (quand $d'$ est grand). Plusieurs articles nous invitent à revoir des concepts fondamentaux comme l'extrapolation \cite{balestriero_highdimension}. On peut noter les difficultés suivantes :\newline
+	\begin{itemize}
+		\item \texthighlight{L'espace de recherche grandit} : avec peu d'observations frauduleuses, les trouver dans des espaces toujours plus grands devient plus difficile
+		\item \texthighlight{Les distances perdent en sens} : tous les points tendent à être à la même distance (voir annexe)\newline
+	\end{itemize}
+	
+	Un autre phénomène, qui n'est pas vraiment relié au fléau de la dimension, que l'on appelle la \texthighlight{la double descente} nous invite à réfléchir en terme de capacité de modèle ($d$ pour simplifier) mais également en terme de données ($n$) : voir \cite{nakkiran2019more}
+\end{frame}
+
+
 \begin{frame}{}{En résumé}
 	\begin{itemize}
 		\item \texthighlight{L'hyper déséquilibre} de classe induit des difficultés d'entraînement et nécessite des réponses mesurées
 		\item \texthighlight{Les drifts} inhérent à l'activité de production accentuent le premier point et nécessite une création et un suivi minutieux des algorithmes
-		\item \texthighlight{Le fléau de la dimension} peut survenir plus tôt que prévu, une réponse est de mettre l'accent sur le travail métier pour créer de la valeur
+		\item \texthighlight{Le fléau de la dimension} peut survenir plus tôt que prévu, une réponse est de mettre l'accent sur le travail métier pour créer de la valeur\newline
 	\end{itemize}
+	
+	Contraint par le temps réel, des recherches sont menées chez BPCE Payment Services pour trouver le meilleur équilibre entre puissance algorithmique et maîtrise\footnote{Dans le sens d'explicativité, de capacité d'audit et de garantie mathématiques} de l'algorithme sur l'ensemble des aspects présentés.
 \end{frame}
 
 
-%\begin{frame}[allowframebreaks]{Bibliographie}
-%	\bibliographystyle{apalike}
-%	\bibliography{Bibli_RecentAdvances}
-%\end{frame}
+\begin{frame}[allowframebreaks]{Bibliographie}
+	\bibliographystyle{apalike}
+	\bibliography{Bibli_OSMP}
+\end{frame}
 
-%\appendix
+\appendix
 
 \section{Annexe : SMOTE}
 \begin{frame}{}{Fonctionnement}
